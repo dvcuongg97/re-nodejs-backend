@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-be-zero",
+  "version": "1.0.0",
+  "description": "Nodejs BackEnd Basic reStart",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvcuongg97/re-nodejs-backend.git"
+  },
+  "keywords": [
+    "nodejsbe"
+  ],
+  "author": "Dinh Van Cuong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvcuongg97/re-nodejs-backend/issues"
+  },
+  "homepage": "https://github.com/dvcuongg97/re-nodejs-backend#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
