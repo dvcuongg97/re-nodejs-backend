@@ -1,12 +1,14 @@
 const express = require("express");
+
+// import router form express
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("Hello World! with nodemon");
-});
+// import handler
+const { getHomepage, getEjs } = require("../controllers/homeController");
 
-router.get("/ejs", (req, res) => {
-  res.render("sample.ejs");
-});
+// routes
+router.get("/", getHomepage);
+router.get("/ejs", getEjs);
 
+// export routers
 module.exports = router;
