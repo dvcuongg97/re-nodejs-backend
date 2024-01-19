@@ -7,13 +7,13 @@ const router = express.Router();
 const {
   getHomepage,
   getEjs,
-  postAddUser,
+  postCreateUser,
 } = require("../controllers/homeController");
 
 // routes
 router.get("/", getHomepage);
 router.get("/ejs", getEjs);
-router.post("/add-user", postAddUser);
+router.post("/add-user", postCreateUser);
 
 // export routers
 module.exports = router;
