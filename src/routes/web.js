@@ -4,11 +4,16 @@ const express = require("express");
 const router = express.Router();
 
 // import handler
-const { getHomepage, getEjs } = require("../controllers/homeController");
+const {
+  getHomepage,
+  getEjs,
+  postAddUser,
+} = require("../controllers/homeController");
 
 // routes
 router.get("/", getHomepage);
 router.get("/ejs", getEjs);
+router.post("/add-user", postAddUser);
 
 // export routers
 module.exports = router;
