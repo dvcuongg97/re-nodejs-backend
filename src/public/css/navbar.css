@@ -41,9 +41,26 @@ form {
 }
 
 .imgClass {
-    width: 500px;
+    width: 800px;
     height: auto;
     margin: 100px auto;
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tableContainer {
+    width: 800px;
+    height: auto;
+    margin: 30px auto;
+}
+
+.tableTitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: #04AA6D
 }
 
 .table {
@@ -59,5 +76,5 @@ td {
 }
 
 tr:hover {
-    background-color: coral;
+    background-color: #ccc;
 }

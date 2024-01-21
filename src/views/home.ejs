@@ -20,33 +20,46 @@
             <img src="/img/nodejs.png" alt="logo">
         </div>
         <!-- table -->
-        <table class="table">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Points</th>
-            </tr>
-            <tr>
-                <td>Peter</td>
-                <td>Griffin</td>
-                <td>$100</td>
-            </tr>
-            <tr>
-                <td>Lois</td>
-                <td>Griffin</td>
-                <td>$150</td>
-            </tr>
-            <tr>
-                <td>Joe</td>
-                <td>Swanson</td>
-                <td>$300</td>
-            </tr>
-            <tr>
-                <td>Cleveland</td>
-                <td>Brown</td>
-                <td>$250</td>
-            </tr>
-        </table>
+        <%= JSON.stringify(listUsers) %>
+        <div class="tableContainer">
+            <p class="tableTitle">List Users</p>
+            <table class="table">
+                <!-- table head -->
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Action</th>
+                </tr>
+                <!-- table content -->
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                    <td>$100</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Del</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>Cleveland</td>
+                    <td>Brown</td>
+                    <td>$250</td>
+                </tr>
+            </table>
+        </div>
 
     </body>
 </html>
