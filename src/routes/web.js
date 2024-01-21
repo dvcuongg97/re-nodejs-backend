@@ -8,12 +8,14 @@ const {
   getHomepage,
   getEjs,
   postCreateUser,
+  getCreatePage,
 } = require("../controllers/homeController");
 
 // routes
 router.get("/", getHomepage);
 router.get("/ejs", getEjs);
-router.post("/add-user", postCreateUser);
+router.post("/create-user-succeed", postCreateUser);
+router.get("/create-user", getCreatePage);
 
 // export routers
 module.exports = router;

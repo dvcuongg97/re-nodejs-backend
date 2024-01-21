@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <title>BackEnd NodeJs Home</title>
+    </head>
+
+    <body>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a class="active" href="/create-user">Create User</li>
+        </ul>
+
+        <form action="/create-user-succeed" method="post">
+            <fieldset>
+                <legend>Add new user:</legend>
+                <div class="formContainer">
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email"><br><br>
+                    <label for="name">Name:</label><br>
+                    <input type="text" name="name"><br><br>
+                    <label for="city">City:</label><br>
+                    <input type="text" name="city"><br><br>
+                    <button>Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -7,30 +7,46 @@
     </head>
 
     <body>
-
+        <!-- navbar -->
         <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/create-user">Create User</a></li>
         </ul>
+        <!-- img -->
+        <div class="imgClass">
+            <h3>
+                NodeJS BackEnd
+            </h3>
+            <img src="/img/nodejs.png" alt="logo">
+        </div>
+        <!-- table -->
+        <table class="table">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>$150</td>
+            </tr>
+            <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>$300</td>
+            </tr>
+            <tr>
+                <td>Cleveland</td>
+                <td>Brown</td>
+                <td>$250</td>
+            </tr>
+        </table>
 
-        <form action="/add-user" method="post">
-            <fieldset>
-                <legend>Add new user:</legend>
-                <div class="formContainer">
-                    <label for="email">Email:</label><br>
-                    <input type="email" name="email"><br><br>
-                    <!-- id="email" name="email" -->
-                    <label for="name">Name:</label><br>
-                    <input type="text" name="name"><br><br>
-                    <!-- id="fname" name="name" -->
-                    <label for="city">City:</label><br>
-                    <input type="text" name="city"><br><br>
-                    <!--  id="lname" name="city" -->
-                    <button>Submit</button>
-                </div>
-            </fieldset>
-        </form>
     </body>
 </html>
