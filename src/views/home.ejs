@@ -11,6 +11,8 @@
         <ul>
             <li><a class="active" href="/">Home</a></li>
             <li><a href="/create-user">Create User</a></li>
+            <li><a href="/update-user">Update User</a></li>
+
         </ul>
         <!-- img -->
         <div class="imgClass">
@@ -20,7 +22,7 @@
             <img src="/img/nodejs.png" alt="logo">
         </div>
         <!-- table -->
-        <%= JSON.stringify(listUsers) %>
+        <!-- <%= JSON.stringify(listUsers) %> -->
         <div class="tableContainer">
             <p class="tableTitle">List Users</p>
             <table class="table">
@@ -33,31 +35,22 @@
                     <th>Action</th>
                 </tr>
                 <!-- table content -->
+                <% for (var i = 0; i < listUsers.length; i++) { %>
                 <tr>
-                    <td>Peter</td>
-                    <td>Griffin</td>
-                    <td>$100</td>
-                    <td>$100</td>
+                    <td><%= [i] %></td>
+                    <td><%= listUsers[i].email %></td>
+                    <td><%= listUsers[i].name %></td>
+                    <td><%= listUsers[i].city %></td>
                     <td>
-                        <button>Edit</button>
-                        <button>Del</button>
+                        <a href="/update-user">
+                            <button style="margin-right: 10px; padding: 5px;">Edit</button>
+                        </a>
+                        <button style="margin-right: 10px; padding: 5px;">Del</button>
                     </td>
                 </tr>
-                <tr>
-                    <td>Lois</td>
-                    <td>Griffin</td>
-                    <td>$150</td>
-                </tr>
-                <tr>
-                    <td>Joe</td>
-                    <td>Swanson</td>
-                    <td>$300</td>
-                </tr>
-                <tr>
-                    <td>Cleveland</td>
-                    <td>Brown</td>
-                    <td>$250</td>
-                </tr>
+                <% } %>
+                <!--  -->
+
             </table>
         </div>
 

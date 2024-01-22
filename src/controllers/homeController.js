@@ -14,21 +14,12 @@ const getHomepage = async (req, res) => {
 
 const postCreateUser = async (req, res) => {
   const { email, name, city } = req.body;
-  console.log(
-    ">>check email ::",
-    email,
-    ">>check name ::",
-    name,
-    ">>check city ::",
-    city
-  );
   let [results, fields] = await connection.query(
     `INSERT INTO
     Users  (email, name, city)
     VALUES(?, ? ,?)`,
     [email, name, city]
   );
-  console.log(">> check results ::", results);
   res.send("Create new user succeed !!");
 };
 
@@ -36,9 +27,14 @@ const getCreatePage = (req, res) => {
   res.render("createUser.ejs");
 };
 
+const getUpdatePage = (req, res) => {
+  res.render("updateUser.ejs");
+};
+
 module.exports = {
   getHomepage,
   getEjs,
   postCreateUser,
   getCreatePage,
+  getUpdatePage,
 };

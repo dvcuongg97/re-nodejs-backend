@@ -7,17 +7,16 @@
     </head>
 
     <body>
-
+        <!-- navbar -->
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a class="active" href="/create-user">Create User </a></li>
-            <li><a href="/update-user">Update User</a></li>
-
+            <li><a href="/create-user">Create User</a></li>
+            <li><a class="active" href="/update-user">Update User</a></li>
         </ul>
 
-        <form action="/update-user-succeed" method="post">
+        <form action="/create-user-succeed" method="post">
             <fieldset>
-                <legend>Add new user:</legend>
+                <legend>Update user:</legend>
                 <div class="formContainer">
                     <label for="email">Email:</label><br>
                     <input type="email" name="email"><br><br>
@@ -29,5 +28,6 @@
                 </div>
             </fieldset>
         </form>
+
     </body>
 </html>
