@@ -10,6 +10,8 @@ const {
   postCreateUser,
   getUpdatePage,
   postUpdateUser,
+  postDeleteUser,
+  postConfirmDeleteUser,
 } = require("../controllers/homeController");
 
 // home router
@@ -20,6 +22,8 @@ router.post("/create-user-succeed", postCreateUser);
 // update user router
 router.get("/update-user/:userId", getUpdatePage);
 router.post("/update-user-succeed", postUpdateUser);
-
+// delete user by id
+router.get("/delete-user/:userId", postDeleteUser);
+router.post("/delete-user-succeed", postConfirmDeleteUser);
 // export routers
 module.exports = router;

@@ -4,12 +4,12 @@ const {
   getAllUser,
   getUserById,
   updateUserById,
+  deleteUserById,
 } = require("../services/CRUDService");
 
 // home
 const getHomepage = async (req, res) => {
   const listUsers = await getAllUser();
-  console.log(">> check results::", listUsers);
   return res.render("home.ejs", { listUsers });
 };
 
@@ -33,11 +33,7 @@ const getCreatePage = (req, res) => {
 // select user by id
 const getUpdatePage = async (req, res) => {
   const userId = req.params.userId;
-  console.log(">>log userId", userId);
-
   const results = await getUserById(userId);
-  console.log(">>results ::", results);
-
   let userUpdate = results && results.length > 0 ? results[0] : {};
   res.render("updateUser.ejs", { userUpdate });
 };
@@ -48,6 +44,18 @@ const postUpdateUser = async (req, res) => {
   await updateUserById(email, name, city, id);
   res.redirect("/");
 };
+// delete user
+const postDeleteUser = async (req, res) => {
+  const userId = req.params.userId;
+  const results = await getUserById(userId);
+  let userDelete = results && results.length > 0 ? results[0] : {};
+  res.render("deleteUser.ejs", { userDelete });
+};
+const postConfirmDeleteUser = async (req, res) => {
+  const { id } = req.body;
+  await deleteUserById(id);
+  res.redirect("/");
+};
 
 module.exports = {
   getHomepage,
@@ -55,4 +63,6 @@ module.exports = {
   getCreatePage,
   getUpdatePage,
   postUpdateUser,
+  postDeleteUser,
+  postConfirmDeleteUser,
 };

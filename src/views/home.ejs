@@ -40,10 +40,17 @@
                     <td><%= listUsers[i].name %></td>
                     <td><%= listUsers[i].city %></td>
                     <td>
-                        <a href="/update-user/<%= listUsers[i].id %>">
-                            <button style="margin-right: 10px; padding: 5px;">Edit</button>
-                        </a>
-                        <button style="margin-right: 10px; padding: 5px;">Del</button>
+                        <button>
+                            <a href="/update-user/<%= listUsers[i].id %>">
+                                Edit
+                            </a>
+                        </button>
+                        <button>
+                            <a href="/delete-user/<%= listUsers[i].id %>">
+                                Delete
+                            </a>
+                        </button>
+
                     </td>
                 </tr>
                 <% } %>

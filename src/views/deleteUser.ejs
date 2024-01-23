@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <title>BackEnd NodeJs Home</title>
+    </head>
+
+    <body>
+        <!-- navbar -->
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/create-user">Create User</a></li>
+            <li><a href="/update-user/<%= userDelete.id %>">Update User</a></li>
+            <li><a class="active" href="/delete-user/<%= userDelete.id %>">Delete User</a></li>
+        </ul>
+
+        <form action="/delete-user-succeed" method="post">
+            <fieldset>
+                <legend>Confirm</legend>
+                <div class="formContainer">
+                    <label for="id">ID:</label><br>
+                    <input disabled name="id" value="<%= userDelete.id %>"><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" value="<%= userDelete.email %>"><br><br> <button>Confirm</button>
+                </div>
+            </fieldset>
+        </form>
+
+    </body>
+</html>
