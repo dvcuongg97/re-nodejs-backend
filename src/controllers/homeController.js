@@ -1,6 +1,6 @@
 // handler function
 const connection = require("../config/database");
-const { getAllUser } = require("../services/CRUDService");
+const { getAllUser, getUserById } = require("../services/CRUDService");
 
 const getEjs = (req, res) => {
   res.render("sample.ejs");
@@ -27,8 +27,13 @@ const getCreatePage = (req, res) => {
   res.render("createUser.ejs");
 };
 
-const getUpdatePage = (req, res) => {
-  res.render("updateUser.ejs");
+const getUpdatePage = async (req, res) => {
+  const userId = req.params.userId;
+  console.log(">>log userId", userId);
+  const results = await getUserById(userId);
+  console.log(">>results ::", results);
+  let userUpdate = results && results.length > 0 ? results[0] : {};
+  res.render("updateUser.ejs", { userUpdate });
 };
 
 module.exports = {

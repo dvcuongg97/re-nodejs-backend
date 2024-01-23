@@ -5,6 +5,15 @@ const getAllUser = async () => {
   return results;
 };
 
+const getUserById = async (id) => {
+  let [results, fields] = await connection.query(
+    "select * from Users where id = ?",
+    [id]
+  );
+  return results;
+};
+
 module.exports = {
   getAllUser,
+  getUserById,
 };

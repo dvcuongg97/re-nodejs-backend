@@ -37,12 +37,12 @@
                 <!-- table content -->
                 <% for (var i = 0; i < listUsers.length; i++) { %>
                 <tr>
-                    <td><%= [i] %></td>
+                    <td><%= listUsers[i].id %></td>
                     <td><%= listUsers[i].email %></td>
                     <td><%= listUsers[i].name %></td>
                     <td><%= listUsers[i].city %></td>
                     <td>
-                        <a href="/update-user">
+                        <a href="/update-user/<%= listUsers[i].id %>">
                             <button style="margin-right: 10px; padding: 5px;">Edit</button>
                         </a>
                         <button style="margin-right: 10px; padding: 5px;">Del</button>
