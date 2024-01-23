@@ -14,19 +14,19 @@
             <li><a class="active" href="/update-user">Update User</a></li>
         </ul>
 
-        <form action="/create-user-succeed" method="post">
+        <form action="/update-user-succeed" method="post">
             <fieldset>
                 <legend>Update user:</legend>
                 <div class="formContainer">
                     <label for="id">ID:</label><br>
-                    <input readonly type="email" name="id" value="<%= userUpdate.id %>"><br><br>
+                    <input readonly name="id" value="<%= userUpdate.id %>"><br><br>
                     <label for="email">Email:</label><br>
                     <input type="email" name="email" value="<%= userUpdate.email %>"><br><br>
                     <label for="name">Name:</label><br>
                     <input type="text" name="name" value="<%= userUpdate.name %>"><br><br>
                     <label for="city">City:</label><br>
                     <input type="text" name="city" value="<%= userUpdate.city %>"><br><br>
-                    <button>Submit</button>
+                    <button>Update</button>
                 </div>
             </fieldset>
         </form>

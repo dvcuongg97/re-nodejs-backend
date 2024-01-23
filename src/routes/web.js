@@ -6,18 +6,20 @@ const router = express.Router();
 // import handler
 const {
   getHomepage,
-  getEjs,
-  postCreateUser,
   getCreatePage,
+  postCreateUser,
   getUpdatePage,
+  postUpdateUser,
 } = require("../controllers/homeController");
 
-// routes
+// home router
 router.get("/", getHomepage);
-router.get("/ejs", getEjs);
-router.post("/create-user-succeed", postCreateUser);
+// create user router
 router.get("/create-user", getCreatePage);
+router.post("/create-user-succeed", postCreateUser);
+// update user router
 router.get("/update-user/:userId", getUpdatePage);
+router.post("/update-user-succeed", postUpdateUser);
 
 // export routers
 module.exports = router;
